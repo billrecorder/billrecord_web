@@ -15,6 +15,6 @@ export default {
 
 <style lang="less" scoped>
 .container {
-  padding: 10px 16px;
+  padding: @THEME_PADDING_HOR @THEME_PADDING_VER;
 }
 </style>

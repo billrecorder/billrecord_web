@@ -37,7 +37,7 @@ exports.createNotifierCallback = () => {
 
 exports.createStyleLoaders = (options) => {
   let lessResPatterns = [
-    // path.resolve(__dirname, '../src/components/vars/*.less'),
+    exports.resolve('./src/assets/styles/var.less'),
   ]
   // base loader definition
   const vueLoader = {
@@ -79,7 +79,10 @@ exports.createStyleLoaders = (options) => {
 
   const cssLoaderSetting = {
     test: /\.css$/,
-    // include: [exports.resolve('src')],
+    include: [
+      exports.resolve('src'),
+      exports.resolve('node_modules/iview/dist/styles/iview.css'),
+    ],
     oneOf: [
       {
         resourceQuery: /module/,
