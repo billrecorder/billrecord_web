@@ -1,11 +1,15 @@
 <template>
-  <div class="container">
-    hello world
-  </div>
+  <Layout>
+    <div class="container">hello world</div>
+  </Layout>
 </template>
 
 <script>
+import Layout from '../../components/Layout'
+
 export default {
+  components: { Layout },
+
   data () {
     return {
     }
