@@ -1,14 +1,20 @@
 <template>
   <Layout>
-    <div class="container">hello world</div>
+    <div class="container">
+      <BillList />
+    </div>
   </Layout>
 </template>
 
 <script>
 import Layout from '../../components/Layout'
+import BillList from './BillList'
 
 export default {
-  components: { Layout },
+  components: {
+    Layout,
+    BillList,
+  },
 
   data () {
     return {
@@ -19,6 +25,6 @@ export default {
 
 <style lang="less" scoped>
 .container {
-  padding: @THEME_PADDING_HOR @THEME_PADDING_VER;
+  padding: @THEME_PADDING_VER @THEME_PADDING_HOR;
 }
 </style>
