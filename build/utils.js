@@ -64,6 +64,7 @@ exports.createStyleLoaders = (options) => {
     loader: 'less-loader',
     options: {
       sourceMap: config.dev.cssSourceMap,
+      javascriptEnabled: true,
     },
   }
   const lessResLoader = {
