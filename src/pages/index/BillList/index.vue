@@ -2,7 +2,7 @@
   <div class="bill-list-wrapepr">
     <SkeItem v-if="skeLoading" />
     <div class="bill-list">
-      <BilItem
+      <BillItem
         v-for="(bill) in listData" :key="bill._id"
         :value="bill"
       />
