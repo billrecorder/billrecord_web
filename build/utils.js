@@ -37,7 +37,7 @@ exports.createNotifierCallback = () => {
 
 exports.createStyleLoaders = (options) => {
   let lessResPatterns = [
-    exports.resolve('./src/assets/styles/var.less'),
+    exports.resolve('./src/common/styles/var.less'),
   ]
   // base loader definition
   const vueLoader = {

@@ -1,24 +1,36 @@
 <template>
   <Layout>
     <div class="container">
-      <BillList />
+      <!-- <BillList /> -->
+      <i-button @click="handleApiTest">测试接口</i-button>
     </div>
   </Layout>
 </template>
 
 <script>
 import Layout from '../../components/Layout'
-import BillList from './BillList'
+// import BillList from './BillList'
+
+import {
+  test,
+} from '@api/bill'
 
 export default {
   components: {
     Layout,
-    BillList,
+    // BillList,
   },
 
   data () {
     return {
     }
+  },
+
+  methods: {
+    async handleApiTest () {
+      const { success } = await test()
+      console.log(success)
+    },
   },
 }
 </script>

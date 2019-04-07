@@ -1,12 +1,17 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import Index from './pages/index/index.vue'
-
 Vue.use(VueRouter)
 
 const routes = [
-  { path: '/', component: Index },
+  {
+    path: '/',
+    component: () => import('./pages/index'),
+  },
+  {
+    path: '/login',
+    component: () => import('./pages/login'),
+  },
 ]
 
 const router = new VueRouter({

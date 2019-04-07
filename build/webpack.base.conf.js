@@ -37,6 +37,7 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': utils.resolve('src'),
+      '@api': utils.resolve('src/common/api'),
     }
   },
   module: {
@@ -109,11 +110,6 @@ module.exports = {
   plugins: [
     // copy custom static assets
     new CopyWebpackPlugin([
-      {
-        from: utils.resolve('./src/static'),
-        to: config.dev.assetsSubDirectory,
-        ignore: ['.*']
-      },
       {
         from: utils.resolve('./src/static'),
         to: config.dev.assetsSubDirectory,

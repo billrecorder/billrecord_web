@@ -4,7 +4,7 @@ import router from './router'
 
 import iview from 'iview'
 import 'iview/dist/styles/iview.css'
-import './assets/themes/iview.less'
+import './common/themes/iview.less'
 
 import App from './App.vue'
 
